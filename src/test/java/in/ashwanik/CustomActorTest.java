@@ -1,7 +1,7 @@
 package in.ashwanik;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 import org.mockito.Mockito;
 
 import java.util.function.BiConsumer;
@@ -19,7 +19,7 @@ public class CustomActorTest {
     private BiConsumer<CustomActor<String>, Throwable> errorHandler = mock(BiConsumer.class);
     private CustomActor<String> actor;
 
-    @BeforeEach
+    @Before
     public void setUp() {
         actor = ActorSystem.spawn(behaviourHandler, errorHandler);
     }
